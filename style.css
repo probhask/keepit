@@ -1,0 +1,181 @@
+:root {
+  /* main body  light gray*/
+  --primary-background: #f5f5f5;
+  /* button, highlight  bright blue */
+  --primary-accent: #4a90e2;
+  /* secondary accent   warm coral*/
+  --secondary-accent: #d95f76;
+  /* text(body text) Dark gray*/
+  --primary-text: #333333;
+  /* notes background white */
+  --bg-primary: #ffffff;
+  /* input field(border color) medium gary */
+  --medium-gray: #9b9b9b;
+  /* Background header footer muted orange */
+  --bg-header: #f4a261;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  min-width: 220px;
+  height: 100vh;
+  background-color: var(--primary-background);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: auto;
+}
+/* hidden class */
+.hidden {
+  display: none;
+}
+
+/***** header *****/
+.heading {
+  background-color: var(--bg-header);
+  color: var(--secondary-accent);
+  padding-inline: 20px;
+  padding-block: 15px;
+}
+/***** End header *****/
+
+/***** add note button *****/
+.add-note {
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-accent);
+  color: var(--bg-primary);
+  border: 1px solid var(--primary-background);
+  gap: 6px;
+  cursor: pointer;
+  padding-block: 5px;
+  padding-inline: 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@media (max-width: 400px) {
+  .add-note {
+    right: unset;
+    font-size: 1.2rem;
+    width: 200px;
+    max-width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+}
+/***** End add note button *****/
+
+/***** operation buttons *****/
+.operation {
+  margin: 8px 5px 10px auto;
+}
+:is(.edit, .delete, .save) {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+:is(.edit, .save, .delete):active {
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+
+  transition: transform 0.5s ease;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+}
+:is(.edit) {
+  color: green;
+}
+.save {
+  color: var(--medium-gray);
+}
+.delete {
+  color: red;
+}
+
+/***** End operation buttons *****/
+
+/***** notes section *****/
+#note-list-section {
+  margin-block: 50px;
+  padding-bottom: 50px;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+  font-size: 1rem;
+}
+/* note */
+.note {
+  border: 2px solid var(--medium-gray);
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-width: 200px;
+  height: 150px;
+  text-align: justify;
+  overflow: auto;
+  padding: 5px 10px;
+  box-shadow: 0 0 3px var(--bg-primary);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+/* note txt div */
+.note-txt {
+  background-color: var(--bg-primary);
+}
+/* text area */
+#edit-note-text-area {
+  border: none;
+  resize: none;
+  background-color: var(--bg-primary);
+  font-weight: bold;
+  caret-color: green;
+  caret-shape: underscore;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  /* background-color: #4a90e2; */
+  color: var(--medium-gray);
+}
+textarea:focus-visible {
+  border: none;
+  outline: none;
+}
+
+/***** End notes section *****/
