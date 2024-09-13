@@ -3,7 +3,13 @@
 ## Project Description
 **KeepIt** is a simple web-based note-taking application that allows users to create, edit, and delete notes. Notes are saved locally in the browser's `localStorage`, ensuring persistence between sessions. The app features a minimalistic design with user-friendly interactions and responsive layout, making it accessible on both desktop and mobile devices.
 
-![!website-live-preview](./preview.png)
+## GitHub Pages Deployed Link
+[Visit Live Project 🔗](https://probhask.github.io/keepit/)
+```bash
+https://probhask.github.io/keepit/
+```
+
+![!website-live-preview ](./preview.png)
 
 ## Features
 - **Add Notes**: Users can add new notes with a single click.
@@ -22,17 +28,20 @@
 - **LocalStorage API**: Used for saving notes locally in the browser.
 
 ## File Structure
-- **index.html**: Defines the structure of the application, includes the header, buttons, and notes section.
-- **style.css**: Contains all the styling for the app, including layout, colors, and responsiveness.
-- **script.js**: Contains the JavaScript logic that powers the note-taking functionality, including adding, editing, and saving notes to `localStorage`.
+```
+project-folder/
+│
+├── index.html    # Main HTML file. Defines the structure of the application, includes the header, buttons, and notes section.
+├── style.css     # Main CSS file for styling. Contains all the styling for the app, including layout, colors, and responsiveness.
+├── script.js     # Main JavaScript file for functionality. Contains the JavaScript logic that powers the note-taking functionality, including adding, editing, and saving notes to `localStorage`.
+└── README.md     # Project documentation
+```
+
 
 ## How to Run the Project
 1. Clone the repository or download the project files.
 2. Open `index.html` in any modern web browser.
 
-## Installation Steps
-1. No installation is required. Simply open the `index.html` file in a browser.
-2. If you'd like to deploy it on a web server, copy all the files (HTML, CSS, and JavaScript) to the server.
 
 ## Usage
 - **Add Note**: Click the "Add Note" button to create a new note.
@@ -43,6 +52,5 @@
 ## Future Improvements
 - Add the ability to categorize notes.
 - Add a search functionality to quickly find notes.
-- Sync notes across devices using a backend service.
 
 
